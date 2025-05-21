@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fa">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no" />
+		<title>Aroma Cafe - Home</title>
+		<link
+			rel="shortcut icon"
+			href="/logo.png"
+			type="image/x-icon" />
+		<meta
+			name="description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			name="keywords"
+			content="کافه آروما, کافه در پاکدشت, کافه خاتون‌آباد, قهوه پاکدشت, نوشیدنی خاص, دسر خانگی, کافی‌شاپ آروما, کافه دنج, کافی شاپ در پاکدشت" />
+		<meta
+			name="author"
+			content="Mahdi Rostami" />
+		<meta
+			http-equiv="Content-Language"
+			content="fa" />
+		<meta
+			property="og:title"
+			content="کافه آروما - صفحه اصلی" />
+		<meta
+			property="og:description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			property="og:image"
+			content="/images/cafe-aroma.png" />
+		<meta
+			property="og:url"
+			content="https://aroma-cafe.vercel.app" />
+		<meta
+			property="og:type"
+			content="website" />
+
+		<!-- ion icons -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+	</head>
+	<body>
+		<noscript>
+			<h1>you need enable javascript to run this app</h1>
+		</noscript>
+		<!-- header component -->
+		<c-header></c-header>
+		<!--  -->
+		<c-header-section
+			data-title="منو کافه آروما"
+			data-sub-text="هرچی گرمش هست ، سردش هم هست"
+			data-bg="/images/gallery/aroma-cafe.png"></c-header-section>
+		<!-- menu section -->
+		<main class="menu-section wrapper gap">
+			<header class="menu-header flex flex-col">
+				<h2 class="font-semibold text-2xl md:text-3xl">لیست منو بر اساس دسته بندی</h2>
+				<c-menu></c-menu>
+			</header>
+			<div
+				id="menu-grid"
+				class="grid gap-6 lg:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"></div>
+		</main>
+		<!-- footer component -->
+		<c-footer></c-footer>
+		<!--  -->
+		<script
+			type="module"
+			src="/src/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fa">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no" />
+		<title>Aroma Cafe - Home</title>
+		<link
+			rel="shortcut icon"
+			href="/logo.png"
+			type="image/x-icon" />
+		<meta
+			name="description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			name="keywords"
+			content="کافه آروما, کافه در پاکدشت, کافه خاتون‌آباد, قهوه پاکدشت, نوشیدنی خاص, دسر خانگی, کافی‌شاپ آروما, کافه دنج, کافی شاپ در پاکدشت" />
+		<meta
+			name="author"
+			content="Mahdi Rostami" />
+		<meta
+			http-equiv="Content-Language"
+			content="fa" />
+		<meta
+			property="og:title"
+			content="کافه آروما - صفحه اصلی" />
+		<meta
+			property="og:description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			property="og:image"
+			content="/images/cafe-aroma.png" />
+		<meta
+			property="og:url"
+			content="https://aroma-cafe.vercel.app" />
+		<meta
+			property="og:type"
+			content="website" />
+
+		<!-- ion icons -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+	</head>
+	<body>
+		<noscript>
+			<h1>you need enable javascript to run this app</h1>
+		</noscript>
+		<!-- header component -->
+		<c-header></c-header>
+		<!-- hero section start -->
+		<main class="hero-section relative z-1">
+			<div class="absolute inset-0 bg-[url('/images/backgrounds/black-dots.svg')] bg-cover bg-no-repeat z-[-1]"></div>
+			<div class="absolute inset-0 bg-black/60 backdrop-blur-xs z-[-1]"></div>
+			<!-- hero section wrapper -->
+			<section class="wrapper gap">
+				<!-- hero section grid -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+					<div class="flex flex-col gap-12">
+						<!-- hero section header -->
+						<header class="flex flex-col gap-6">
+							<h1 class="title">"بهترین دانه قهوه برای هر فنجان قهوه شما"</h1>
+							<p class="sub-text">با هر جرعه، لحظه‌ای خاص بساز. در آروما، قهوه فقط یک نوشیدنی نیست؛ یه حسه.</p>
+						</header>
+						<!-- cta button -->
+						<c-button
+							data-href="/src/pages/menu.html"
+							data-text="منو کافه"
+							data-type="link"
+							class="lg:w-42 w-full"></c-button>
+						<!-- hero section cafe properties -->
+						<ul
+							class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-12 mt-auto"
+							role="listbox">
+							<li
+								data-cafe-properties="true"
+								class="w-full p-4 rounded-lg bg-black border border-solid border-yellow">
+								<figure
+									data-figure="true"
+									class="flex flex-col justify-center items-center gap-4">
+									<img
+										src="/images/icons/pro-coffee.svg"
+										alt="pro coffee"
+										loading="lazy"
+										class="w-16 h-16" />
+									<figcaption class="text-center text-nowrap text-lg font-semibold text-yellow">قهوه تخصصی</figcaption>
+								</figure>
+							</li>
+							<li
+								data-cafe-properties="true"
+								class="w-full p-4 rounded-lg bg-black border border-solid border-yellow">
+								<figure
+									data-figure="true"
+									class="flex flex-col justify-center items-center gap-4">
+									<img
+										src="/images/icons/hot-space.svg"
+										alt="hot space"
+										loading="lazy"
+										class="w-16 h-16" />
+									<figcaption class="text-center text-nowrap text-lg font-semibold text-yellow">فضای آرام</figcaption>
+								</figure>
+							</li>
+							<li
+								data-cafe-properties="true"
+								class="w-full p-4 rounded-lg bg-black border border-solid border-yellow">
+								<figure
+									data-figure="true"
+									class="flex flex-col justify-center items-center gap-4">
+									<img
+										src="/images/icons/cafe-menu.svg"
+										alt="cafe menu"
+										loading="lazy"
+										class="w-16 h-16" />
+									<figcaption class="text-center text-nowrap text-lg font-semibold text-yellow">منوی متنوع</figcaption>
+								</figure>
+							</li>
+						</ul>
+					</div>
+					<!-- hero section figure -->
+					<figure
+						data-figure="true"
+						class="p-0.5 rounded-lg bg-cream/10">
+						<!-- scroll down button -->
+						<a
+							href="#about"
+							title="scroll down"
+							class="flex-center absolute top-[100%] right-[50%] translate-x-[50%] lg:translate-x-0 lg:top-[50%] lg:right-[-6%] translate-y-[-50%] w-20 h-20 rounded-full bg-orange border-5 border-solid border-black outline-10 outline-solid outline-black overflow-hidden group">
+							<img
+								src="/images/icons/scroll-down.svg"
+								alt="scroll down"
+								class="w-0 h-0 opacity-0 duration-500 ease-custom -translate-y-full group-hover:translate-y-0 group-hover:w-16 group-hover:h-16 group-hover:opacity-100" />
+							<img
+								src="/images/icons/scroll-down.svg"
+								alt="scroll down"
+								class="w-16 h-16 opacity-100 duration-500 ease-custom group-hover:translate-y-full group-hover:w-0 group-hover:h-0 group-hover:opacity-0" />
+						</a>
+						<img
+							src="/images/gallery/aroma-cup.png"
+							alt="aroma cup"
+							loading="lazy"
+							class="w-full h-full rounded-lg object-cover" />
+					</figure>
+				</div>
+			</section>
+		</main>
+		<!-- about section -->
+		<div
+			id="about"
+			class="about-section relative z-1 overflow-hidden">
+			<div
+				class="absolute top-[40%] right-[50%] z-[-1] bg-gradient opacity-20 w-96 h-96 scale-200 blur-2xl mx-auto rounded-full"></div>
+			<section class="gap">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+					<div
+						class="about-fig h-screen bg-[url('/images/gallery/aroma-cafe.png')] bg-cover bg-no-repeat rounded-lg max-lg:bg-center max-lg:order-3"></div>
+					<div class="about-text wrapper order-2 relative">
+						<div
+							class="absolute inset-0 bg-[url('/images/backgrounds/coffee-dots.png')] bg-cover bg-no-repeat z-[-1]"></div>
+						<div class="absolute inset-0 right-[20%] w-1/2 blur-2xl scale-200 bg-black z-[-1]"></div>
+						<header class="flex flex-col gap-6">
+							<h1 class="title">درباره کافه آروما</h1>
+							<p class="sub-text leading-12 text-justify text-balance">
+								در قلب شهر، جایی آرام و صمیمی به نام کافه آروما منتظر شماست.<br />
+								آروما فقط یک کافه نیست، تجربه‌ای‌ست از طعم اصیل قهوه، عطر دل‌نشین لحظه‌ها و حس خوب آرامش. ما باور داریم
+								که هر فنجان قهوه می‌تواند روزی را تغییر دهد. به همین خاطر، از بهترین دانه‌های قهوه تخصصی، روش‌های
+								حرفه‌ای دم‌آوری و تیمی عاشق قهوه استفاده می‌کنیم تا شما را مهمان یک لحظه‌ی بی‌نظیر کنیم. در آروما،
+								کیفیت، آرامش و ارتباط واقعی با مشتری در اولویت است. دعوتتان می‌کنیم تا با ما، طعم متفاوت زندگی را بچشید.
+							</p>
+							<div class="grid items-center grid-cols-1 lg:grid-cols-2">
+								<c-button
+									data-href="/src/pages/testimonials.html"
+									data-text="درباره ما بدانید"
+									data-type="link"
+									class="lg:w-42 w-full mx-auto"></c-button>
+								<figure
+									data-figure="true"
+									class="rotate-12 mt-10">
+									<img
+										src="/images/gallery/coffee-landing.png"
+										alt="coffee landing"
+										loading="lazy"
+										class="mx-auto w-56 h-56 lg:w-96 lg:h-96 lg:mr-auto object-cover" />
+								</figure>
+							</div>
+						</header>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!--  -->
+		<!-- footer component -->
+		<c-footer></c-footer>
+		<!--  -->
+		<script
+			type="module"
+			src="/src/main.js"></script>
+	</body>
+</html>
