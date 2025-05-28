@@ -10,6 +10,9 @@ export default defineConfig({
 			input: {
 				home: "/index.html",
 				menu: "/src/pages/menu.html",
+				gallery: "/src/pages/gallery.html",
+				testimonials: "/src/pages/testimonials.html",
+				contact: "/src/pages/contact.html",
 			},
 		},
 	},
