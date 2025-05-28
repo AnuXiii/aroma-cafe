@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fa">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no" />
+		<title>Aroma Cafe - Contact US</title>
+		<link
+			rel="shortcut icon"
+			href="/logo.png"
+			type="image/x-icon" />
+		<meta
+			name="description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			name="keywords"
+			content="کافه آروما, کافه در پاکدشت, کافه خاتون‌آباد, قهوه پاکدشت, نوشیدنی خاص, دسر خانگی, کافی‌شاپ آروما, کافه دنج, کافی شاپ در پاکدشت" />
+		<meta
+			name="author"
+			content="Mahdi Rostami" />
+		<meta
+			http-equiv="Content-Language"
+			content="fa" />
+		<meta
+			property="og:title"
+			content="کافه آروما - تماس باما" />
+		<meta
+			property="og:description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			property="og:image"
+			content="/images/cafe-aroma.png" />
+		<meta
+			property="og:url"
+			content="contact.html" />
+		<meta
+			property="og:type"
+			content="website" />
+
+		<!-- ion icons -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+	</head>
+	<body>
+		<noscript> you need enable javascript to run this app </noscript>
+		<!-- header component -->
+		<c-header></c-header>
+		<!--  -->
+		<c-header-section
+			data-title="با ما در تماس باشید"
+			data-sub-text="هر سوالی دارید، تیم ما آماده پاسخ‌گویی است"
+			data-bg="/images/backgrounds/contact-us.png"></c-header-section>
+		<!-- menu section -->
+		<main class="contact-us-section wrapper gap">
+			<div class="contact-section">
+				<div class="form-control">
+					<form
+						class="form max-w-4xl w-full mx-auto"
+						id="main-form"
+						name="main-form"
+						data-type="contact-us">
+						<div class="grid grid-cols-1 gap-10 lg:gap-16 lg:grid-cols-12">
+							<div class="input-holder col-span-full lg:col-span-6">
+								<c-input
+									data-type="text"
+									data-placeholder="نام شما"
+									data-id="name"
+									data-name="name"></c-input>
+							</div>
+							<div class="input-holder col-span-full lg:col-span-6">
+								<c-input
+									data-type="email"
+									data-placeholder="ایمیل"
+									data-id="email"
+									data-name="email"></c-input>
+							</div>
+							<div class="input-holder col-span-full">
+								<!-- insert custom selectbox should be with syntax bellow -->
+								<c-select
+									data-title="موضوع"
+									data-name="subject"
+									data-options='
+                                        [
+                                            {"value": "1" , "label": "انتقاد و پیشنهاد"},
+                                            {"value": "2" , "label": "همکاری با آروما"},
+                                            {"value": "3" , "label": "متفرقه"}
+                                        ]'>
+								</c-select>
+							</div>
+							<div class="input-holder col-span-full">
+								<c-input
+									data-type="textarea"
+									data-placeholder="پیام شما"
+									data-id="msg"
+									data-name="msg"></c-input>
+							</div>
+						</div>
+						<div
+							class="g-recaptcha"
+							data-sitekey="6LcWT00rAAAAAKotQz3HMH3lxdJo80lMXi9gjeLh"></div>
+						<c-button
+							data-class="submit mr-auto w-full md:w-42 "
+							data-text="ارسال"></c-button>
+					</form>
+				</div>
+			</div>
+		</main>
+		<div class="overflow-hidden relative w-full gap z-1">
+			<div
+				class="absolute inset-0 bg-[url('/images/backgrounds/cafe-map.png')] bg-cover opacity-70 z-[-1] scale-110"></div>
+			<div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black z-[-1] scale-110"></div>
+			<iframe
+				title="map-iframe"
+				src="https://neshan.org/maps/iframe/places/aea93c735f80f6dcfdab6b507af58bd7#c35.497-51.737-11z-0p/35.4968684/51.6603149"
+				class="mx-auto w-full h-[400px] rounded-xl grayscale-50"
+				allowfullscreen
+				loading="lazy">
+			</iframe>
+		</div>
+
+		<!-- footer component -->
+		<c-footer></c-footer>
+		<!--  -->
+		<script
+			src="https://www.google.com/recaptcha/api.js"
+			async
+			defer></script>
+		<script
+			type="module"
+			src="/src/main.js"></script>
+	</body>
+</html>

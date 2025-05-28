@@ -17,7 +17,6 @@
 - **Alerts**: Toastify.js
 - **Animations**: Gsap.js - ScrollTrigger
 - **Contacting**: Email.js
-- **Slider**: Swiper.js
 - **Maps**: Neshan
 
 <!--  -->

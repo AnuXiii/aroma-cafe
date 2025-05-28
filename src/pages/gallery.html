@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fa">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no" />
+		<title>Aroma Cafe - Gallery</title>
+		<link
+			rel="shortcut icon"
+			href="/logo.png"
+			type="image/x-icon" />
+		<meta
+			name="description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			name="keywords"
+			content="کافه آروما, کافه در پاکدشت, کافه خاتون‌آباد, قهوه پاکدشت, نوشیدنی خاص, دسر خانگی, کافی‌شاپ آروما, کافه دنج, کافی شاپ در پاکدشت" />
+		<meta
+			name="author"
+			content="Mahdi Rostami" />
+		<meta
+			http-equiv="Content-Language"
+			content="fa" />
+		<meta
+			property="og:title"
+			content="کافه آروما - گالری تصاویر" />
+		<meta
+			property="og:description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			property="og:image"
+			content="/images/cafe-aroma.png" />
+		<meta
+			property="og:url"
+			content="gallery.html" />
+		<meta
+			property="og:type"
+			content="website" />
+
+		<!-- ion icons -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+	</head>
+	<body>
+		<noscript> you need enable javascript to run this app </noscript>
+		<!-- header component -->
+		<c-header></c-header>
+		<!--  -->
+		<c-header-section
+			data-title="گالری کافه آروما"
+			data-sub-text="لحظه‌هایی از عطر و رنگ"
+			data-bg="/images/backgrounds/gallery.png"></c-header-section>
+		<!-- menu section -->
+		<main class="gallery-section wrapper gap">
+			<c-gallery></c-gallery>
+
+			<!-- insta cta -->
+			<section
+				class="relative overflow-hidden flex flex-col justify-between gap-8 p-4 my-20 rounded-lg bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] shadow-lg shadow-black z-1">
+				<h2 class="title text-2xl md:text-4xl leading-12">اینستاگرام کافه آروما</h2>
+				<a
+					href="https://www.instagram.com/aroma_cafe_72/"
+					target="_blank"
+					title="instagram page"
+					aria-label="instagram page"
+					class="btn w-max mr-auto rounded-lg text-3xl bg-transparent border border-solid border-cream font-poppins duration-300 ease-custom hover:bg-white hover:text-black"
+					>Follow</a
+				>
+				<img
+					src="/images/icons/instagram.svg"
+					alt="instagram image"
+					class="absolute size-20 z-[-1] bottom-[-15px] right-5 md:right-20 -rotate-12" />
+			</section>
+		</main>
+
+		<!-- footer component -->
+		<c-footer></c-footer>
+		<!--  -->
+		<script
+			type="module"
+			src="/src/main.js"></script>
+	</body>
+</html>

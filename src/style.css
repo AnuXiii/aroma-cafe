@@ -1,6 +1,7 @@
 /* first of the all import custom fonts & animations to */
 @import url(css/fonts.css);
 @import url(css/animations.css);
+@import url(css/toastify.css);
 /* poppins font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @import "tailwindcss";
@@ -12,12 +13,7 @@ noscript {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	h1 {
-		text-align: center;
-		font-size: 3rem;
-		font-size: bold;
-	}
+	font-size: 3rem;
 }
 
 /* custom variables */
@@ -173,6 +169,146 @@ noscript {
 	.sub-text {
 		@apply text-sm text-center font-thin text-cream/60 md:text-lg lg:text-right;
 	}
+
+	/* modal styles */
+	.modal {
+		@apply fixed inset-0 bg-black/90 z-100;
+	}
+
+	.modal-content {
+		@apply relative flex flex-col justify-center items-center min-h-screen;
+	}
+
+	.close-modal {
+		@apply absolute z-2 top-3 right-3 md:top-10 md:right-5 p-4 bg-rose-500 rounded-lg text-2xl ease-custom duration-300 hover:opacity-80 active:scale-95;
+	}
+
+	.content-inner {
+		@apply overflow-y-auto;
+
+		img {
+			@apply w-96 h-96 md:w-full md:h-screen max-h-[90vh] object-cover rounded-lg drop-shadow-2xl drop-shadow-black border border-solid border-yellow/50;
+		}
+	}
+	/* modal styles end */
+
+	/* line title */
+	.line-title {
+		@apply relative mb-15 after:content-[""] after:w-full after:h-0.5 after:bg-gradient-to-l after:from-yellow/20 after:to-black after:absolute after:right-0 after:bottom-[-20px];
+	}
+
+	/* forms styles */
+	.form-control {
+		@apply relative;
+	}
+
+	.form {
+		@apply w-full h-full flex flex-col gap-10 md:gap-20;
+	}
+
+	.input-holder {
+		@apply relative;
+
+		&:focus-within::after {
+			@apply opacity-0;
+		}
+
+		&:focus-within::before {
+			@apply scale-x-100;
+		}
+
+		&::after,
+		&::before {
+			@apply content-[""] absolute bottom-0 right-0 scale-x-100 origin-center w-full mx-auto left-0 h-[1px] bg-yellow ease-custom duration-500;
+		}
+
+		&::before {
+			@apply scale-x-0 bg-orange;
+		}
+
+		textarea {
+			@apply min-h-[100px] max-h-[250px];
+		}
+	}
+
+	.input {
+		@apply w-full outline-none bg-black p-2 text-cream text-xl rounded-lg;
+	}
+
+	.label {
+		@apply text-lg pointer-events-none select-none absolute top-2 right-2 text-cream/70;
+
+		span {
+			@apply ease-custom duration-400;
+		}
+	}
+
+	.label.active {
+		span {
+			@apply opacity-0;
+		}
+	}
+
+	.form-figure {
+		@apply relative w-full h-[300px] md:h-[500px] overflow-hidden;
+
+		&::after {
+			@apply rounded-lg content-[""] absolute inset-0 bg-[url('/images/backgrounds/black-dots.svg')] bg-cover opacity-40;
+		}
+	}
+
+	.form-figure-bg {
+		@apply rounded-lg absolute inset-0 bg-[url('/images/backgrounds/contact.png')] bg-cover;
+	}
+
+	/* forms styles end */
+
+	/* custom selectbox styles */
+	.select-container {
+		@apply overflow-hidden bg-black relative w-full rounded-lg text-cream text-xl;
+	}
+
+	.select-header {
+		@apply text-cream/70;
+
+		&.active {
+			@apply text-black bg-yellow;
+		}
+	}
+
+	.select-header,
+	.select-option {
+		@apply select-none cursor-pointer px-2 py-3 duration-300 ease-custom hover:bg-yellow hover:text-black;
+	}
+
+	.select-arrow {
+		@apply duration-300 ease-custom;
+
+		&.active {
+			@apply rotate-180;
+		}
+	}
+
+	.select-options {
+		@apply max-h-60 overflow-y-auto divide-y divide-dashed divide-yellow duration-300 ease-custom;
+	}
+
+	.select-option {
+		@apply text-cream/80;
+
+		&:hover .checkmark {
+			@apply text-black opacity-100;
+		}
+	}
+
+	.checkmark {
+		@apply text-2xl duration-300 ease-custom opacity-0;
+
+		&.active {
+			@apply text-yellow opacity-100;
+		}
+	}
+	/* custom selectbox styles end */
 }
 
 /* navigation styles */
@@ -258,13 +394,6 @@ noscript {
 }
 
 /* for menu section */
-.menu-header {
-	@apply mb-10;
-
-	h2 {
-		@apply relative mb-15 after:content-[""] after:w-full after:h-0.5 after:bg-gradient-to-l after:from-yellow/20 after:to-black after:absolute after:right-0 after:bottom-[-20px];
-	}
-}
 
 .menu {
 	@apply snap-x flex overflow-x-auto space-x-6 pb-8;
@@ -353,3 +482,138 @@ noscript {
 }
 
 /* menu section end */
+
+/* gallery section start */
+.custom-grid-layout {
+	@apply grid gap-3 md:gap-6 grid-cols-12;
+
+	figure {
+		@apply relative cursor-pointer z-1;
+
+		& > * {
+			@apply duration-300;
+		}
+
+		&:hover {
+			&::after {
+				opacity: 0;
+			}
+
+			.gold-border {
+				scale: 0.99;
+			}
+		}
+
+		&::after {
+			@apply duration-300 content-[''] absolute inset-0 bg-gradient-to-t from-black/80 to-transparent;
+		}
+
+		img {
+			@apply w-full h-full object-cover;
+		}
+	}
+
+	.gold-border {
+		@apply absolute w-max top-0 scale-110 rounded-full z-[-1];
+	}
+
+	figure[data-col] {
+		@apply col-span-6;
+	}
+
+	figure[data-col="6"] {
+		@apply md:col-span-6;
+	}
+
+	figure[data-col="3"] {
+		@apply md:col-span-3;
+	}
+}
+/* gallery styles end */
+
+/* testimonials styles start */
+.testimonial-grid {
+	@apply grid gap-y-20 gap-x-10 grid-cols-1 md:grid-cols-2;
+}
+
+.testimonial-card {
+	--start: 0;
+	@apply z-1 relative bg-black border border-solid border-cream/20 p-4 rounded-lg;
+
+	&::after {
+		@apply absolute content-[''];
+		@apply w-full h-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+		@apply rounded-lg border-2 border-solid border-transparent;
+		@apply bg-fixed bg-yellow opacity-0;
+		@apply transition-opacity duration-1000 ease-custom;
+		mask: linear-gradient(#0000, #0000),
+			conic-gradient(from calc((var(--start) - (20 * 1.1)) * 1deg), #ffffff1f 0deg, white, #ffffff00 100deg);
+		mask-composite: intersect;
+		mask-clip: padding-box, border-box;
+		z-index: -1;
+	}
+
+	&:hover::after {
+		opacity: 1;
+	}
+}
+
+.contact-section {
+	@apply relative p-4 rounded-lg;
+}
+
+.card-figure {
+	@apply outline-20 outline-solid outline-black translate-y-[-70%];
+	@apply mx-auto text-black w-18 h-18 rounded-full text-4xl bg-yellow;
+}
+
+.card-header {
+	@apply mb-8;
+
+	p {
+		@apply text-sm text-gray/90;
+	}
+}
+
+.card-comment {
+	@apply leading-8 text-center text-cream/80;
+}
+
+.card-author {
+	@apply mt-8 mb-2 mr-8 text-2xl font-semibold;
+}
+/* testimonials styles end */
+
+/* when clicked send button change styles */
+.submit {
+	@apply relative;
+
+	&::after,
+	&::before {
+		@apply ease-custom duration-300 content-[""] absolute inset-0 bg-black hidden;
+	}
+
+	&::before {
+		@apply mx-auto top-1.5 rounded-full w-8 h-8 border-2 border-l-transparent border-solid border-yellow z-2 animate-spin;
+	}
+}
+
+.sending {
+	@apply pointer-events-none select-none cursor-not-allowed opacity-70;
+
+	&::after,
+	&::before {
+		@apply block;
+	}
+}
+
+.toastify {
+	&::after {
+		@apply content-[""] absolute bottom-0 right-0 w-full h-[3px] bg-yellow rounded-lg;
+		animation: w-change 3s linear forwards;
+	}
+}
+
+[title="reCAPTCHA"] {
+	@apply w-full max-w-[280px] ml-auto;
+}

@@ -1,12 +1,14 @@
 // Custom Header Web Component
 import { logo, links } from "../constants/index";
 import { headerScrollController } from "../utils/headerScroll";
+import { modal } from "../utils/modal";
+import { contactInformation } from "../constants/index";
 
 export class Header extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
         <header class="header">
-            <div class="wrapper">
+            <div class="wrapper max-md:py-0">
                 <div class="flex-between">
                     <button class="humburger-button relative z-11 lg:hidden" aria-controls="primary-navigation" aria-expanded="false">
                         <svg stroke="var(--humburger-color)" fill="none" class="humburger" viewBox="-10 -10 120 120" width="50">
@@ -46,7 +48,7 @@ export class Header extends HTMLElement {
                 </div>
             </div>
         </header>
-        <div class="h-[128px]"></div>
+        <div class="h-[95px] md:h-[128px]"></div>
         `;
 	}
 }
@@ -79,5 +81,42 @@ window.onload = () => {
 		}
 	});
 
+	// init header scroll controller from => header scroll
 	headerScrollController();
+
+	// when user click location button show modal with map content and contact information from index.js
+	const locationBtn = document.querySelector(".location-btn");
+	locationBtn.addEventListener("click", () => {
+		modal(`
+        <div class="w-screen wrapper grid items-center justify-between gap-12 grid-cols-1 lg:grid-cols-12">
+            <div class="flex flex-col col-span-4 max-lg:hidden">
+                <h2 class="font-bold text-4xl pb-4 mb-4 border-b border-solid border-yellow">اطلاعات تماس</h2>
+                <ul class="flex flex-col gap-4">
+                    ${contactInformation
+											.map(
+												(item) =>
+													`
+                                <li class="link flex items-center gap-2 after:hidden">
+                                    <span class="ml-2 shadow-lg shadow-yellow inline-block rounded-full w-4 h-4 bg-yellow"></span>
+                                    <span class="flex-none text-cream">${item.title}:</span>
+                                    <span class="text-cream/70 ${item.textColor}">${item.desc}</span>
+                                </li>
+                                `
+											)
+											.join("")}
+                </ul>
+            </div>
+            <figure data-figure="true" class="col-span-full lg:col-span-8">
+                <iframe
+				    title="map-iframe"
+				    src="https://neshan.org/maps/iframe/places/aea93c735f80f6dcfdab6b507af58bd7#c35.497-51.737-11z-0p/35.4968684/51.6603149"
+				    class="h-[95vh] w-full rounded-lg"
+				    allowfullscreen
+				    loading="lazy">
+			    </iframe>
+            </figure>
+        </div>    
+            
+            `);
+	});
 };

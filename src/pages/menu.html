@@ -5,7 +5,7 @@
 		<meta
 			name="viewport"
 			content="width=device-width, user-scalable=no" />
-		<title>Aroma Cafe - Home</title>
+		<title>Aroma Cafe - Menu</title>
 		<link
 			rel="shortcut icon"
 			href="/logo.png"
@@ -24,7 +24,7 @@
 			content="fa" />
 		<meta
 			property="og:title"
-			content="کافه آروما - صفحه اصلی" />
+			content="کافه آروما - منو" />
 		<meta
 			property="og:description"
 			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
@@ -33,7 +33,7 @@
 			content="/images/cafe-aroma.png" />
 		<meta
 			property="og:url"
-			content="https://aroma-cafe.vercel.app" />
+			content="menu.html" />
 		<meta
 			property="og:type"
 			content="website" />
@@ -52,9 +52,7 @@
 			href="/src/style.css" />
 	</head>
 	<body>
-		<noscript>
-			<h1>you need enable javascript to run this app</h1>
-		</noscript>
+		<noscript> you need enable javascript to run this app </noscript>
 		<!-- header component -->
 		<c-header></c-header>
 		<!--  -->
@@ -64,8 +62,8 @@
 			data-bg="/images/gallery/aroma-cafe.png"></c-header-section>
 		<!-- menu section -->
 		<main class="menu-section wrapper gap">
-			<header class="menu-header flex flex-col">
-				<h2 class="font-semibold text-2xl md:text-3xl">لیست منو بر اساس دسته بندی</h2>
+			<header class="mb-10 flex flex-col">
+				<h2 class="line-title font-semibold text-2xl md:text-3xl">لیست منو بر اساس دسته بندی</h2>
 				<c-menu></c-menu>
 			</header>
 			<div

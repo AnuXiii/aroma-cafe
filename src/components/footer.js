@@ -10,14 +10,14 @@ export class Footer extends HTMLElement {
                 <div class="wrapper gap pb-5">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
                         <div class="flex flex-col gap-12 relative z-2 max-lg:mb-10">
-                            <h2 class="text text-3xl font-semibold text-cream p-2">اطلاعات تماس</h2>  
+                            <h2 class="text text-2xl font-semibold text-cream p-2">اطلاعات تماس</h2>  
                             <ul class="flex flex-col gap-8">
                                 ${contactInformation
 																	.map(
 																		(item) =>
 																			`
                                 <li class="link flex gap-2 after:hidden">
-                                    <span class="flex-none text-cream/90 font-semibold">${item.title}:</span>
+                                    <span class="flex-none text-cream">${item.title}:</span>
                                     <span class="text-cream/70 ${item.textColor}">${item.desc}</span>
                                 </li>
                                 `
@@ -26,7 +26,7 @@ export class Footer extends HTMLElement {
                             </ul>
                         </div>
                         <div class="flex flex-col gap-12 relative z-2 max-lg:mb-10">
-                            <h2 class="text text-3xl font-semibold text-cream p-2">دسترسی سریع</h2>  
+                            <h2 class="text text-2xl font-semibold text-cream p-2">دسترسی سریع</h2>  
                             <ul class="flex flex-col gap-8">
                                 ${links
 																	.map(
@@ -40,7 +40,7 @@ export class Footer extends HTMLElement {
                             </ul>
                         </div>
                         <div class="flex flex-col gap-12 relative z-2 max-lg:mb-10">
-                            <h2 class="text text-3xl font-semibold text-cream p-2">راه های ارتباطی</h2>  
+                            <h2 class="text text-2xl font-semibold text-cream p-2">راه های ارتباطی</h2>  
                             <ul class="flex items-center gap-8">
                                 ${socials
 																	.map(
@@ -62,14 +62,9 @@ export class Footer extends HTMLElement {
                         </div>
                     </div>
                     
-                    <div class="relative flex justify-between items-center gap-6 pt-20 max-lg:flex-wrap max-lg:justify-center max-lg:text-center">
-                       <p class="text-cream/70 max-lg:order-4">تمامی حقوق این <a class="text-yellow font-semibold duration-200 hover:opacity-70" href="/">وبسایت</a> برای کافه آروما محفوظ می باشد ${new Date().getFullYear()} &copy</p>     
-                        <div class="relative flex-col-center top-[30px] max-lg:w-full">
-                            <h1 class="text-center text-xl md:text-4xl font-poppins font-bold">Cafe Aroma</h1>
-                            <figure data-figure="true" class="absolute top-[-40px]">
-                                <img src="/images/backgrounds/coffee-line.png" alt="coffee-line" loading="lazy" class="w-48"/>
-                            </figure>
-                        </div>
+                    <div class="relative flex justify-between items-center gap-6 max-lg:flex-wrap max-lg:justify-center max-lg:text-center">
+                       <p class="text-cream/70">تمامی حقوق این <a class="text-yellow font-semibold duration-200 hover:opacity-70" href="/">وبسایت</a> برای کافه آروما محفوظ می باشد ${new Date().getFullYear()} &copy</p>  
+                          
                         <p class="text-cream/70">طراحی و توسعه توسط <a class="text-yellow font-semibold duration-200 hover:opacity-70" target="_blank" href="https://instagram.com/mahdirs.696">مهدی رستمی</a></p>                                  
                     </div>
                 </div>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fa">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no" />
+		<title>Aroma Cafe - Testimonials</title>
+		<link
+			rel="shortcut icon"
+			href="/logo.png"
+			type="image/x-icon" />
+		<meta
+			name="description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			name="keywords"
+			content="کافه آروما, کافه در پاکدشت, کافه خاتون‌آباد, قهوه پاکدشت, نوشیدنی خاص, دسر خانگی, کافی‌شاپ آروما, کافه دنج, کافی شاپ در پاکدشت" />
+		<meta
+			name="author"
+			content="Mahdi Rostami" />
+		<meta
+			http-equiv="Content-Language"
+			content="fa" />
+		<meta
+			property="og:title"
+			content="کافه آروما - نظرات مشتریان" />
+		<meta
+			property="og:description"
+			content="کافه آروما در پاکدشت (محله خاتون‌آباد) با فضایی دنج و منحصربه‌فرد، ارائه‌دهنده قهوه‌های اصیل، نوشیدنی‌های خاص و دسرهای خانگی. بهترین انتخاب برای گذراندن لحظاتی آرام و دل‌چسب." />
+		<meta
+			property="og:image"
+			content="/images/cafe-aroma.png" />
+		<meta
+			property="og:url"
+			content="testimonials.html" />
+		<meta
+			property="og:type"
+			content="website" />
+
+		<!-- ion icons -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+	</head>
+	<body>
+		<noscript> you need enable javascript to run this app </noscript>
+		<!-- header component -->
+		<c-header></c-header>
+		<!--  -->
+		<c-header-section
+			data-title="نظرات مشتریان آروما"
+			data-sub-text="بخوانید نظر کسانی را که طعم آروما را چشیده‌اند"
+			data-bg="/images/backgrounds/testimonials.png"></c-header-section>
+		<!-- menu section -->
+		<main class="testimonials-section wrapper gap">
+			<c-testimonial></c-testimonial>
+			<div class="mt-30">
+				<h2 class="line-title leading-12 font-semibold text-2xl md:text-3xl">
+					شما هم نظر خود را با ما در میان بگذارید
+				</h2>
+				<div class="contact-section">
+					<div class="absolute inset-0 bg-[url('/images/backgrounds/black-dots.svg')] bg-cover opacity-50"></div>
+					<div class="absolute inset-0 bg-gradient-to-b from-black via-black to-transparent blur-xs"></div>
+					<div class="grid gap-12 grid-cols-1 lg:grid-cols-2">
+						<figure class="form-figure max-lg:order-1">
+							<div class="form-figure-bg"></div>
+						</figure>
+						<div class="form-control">
+							<form
+								class="form"
+								id="main-form"
+								name="main-form"
+								data-type="comment">
+								<div class="input-holder">
+									<c-input
+										data-type="text"
+										data-placeholder="نام شما"
+										data-id="name"
+										data-name="name"></c-input>
+								</div>
+								<div class="input-holder">
+									<c-input
+										data-type="textarea"
+										data-placeholder="پیام شما"
+										data-id="msg"
+										data-name="msg"></c-input>
+								</div>
+								<div
+									class="g-recaptcha"
+									data-sitekey="6LcWT00rAAAAAKotQz3HMH3lxdJo80lMXi9gjeLh"></div>
+								<c-button
+									data-class="submit mr-auto w-full md:w-42"
+									data-text="ارسال"></c-button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- footer component -->
+		<c-footer></c-footer>
+		<!--  -->
+		<script
+			src="https://www.google.com/recaptcha/api.js"
+			async
+			defer></script>
+		<script
+			type="module"
+			src="/src/main.js"></script>
+	</body>
+</html>

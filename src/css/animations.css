@@ -15,3 +15,9 @@
 .fade-up {
 	animation: fade-up 0.5s var(--ease-custom) forwards;
 }
+
+@keyframes w-change {
+	to {
+		width: 0;
+	}
+}
