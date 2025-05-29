@@ -9,7 +9,7 @@ export function displayMenuItems(category) {
 
 	filteredItems.forEach((item, index) => {
 		const el = document.createElement("div");
-		el.classList.add("menu-item-box", "fade-up", "group");
+		el.classList.add("menu-item-box", "fade-up");
 		el.style.animationDelay = `${index * 100}ms`;
 		el.innerHTML = `
 			<div class="menu-item-box-bg"></div>
@@ -50,9 +50,9 @@ menuNavigation?.addEventListener("click", (e) => {
 
 		validTarget.classList.add("active");
 
-		const cat = validTarget.dataset.value;
+		const category = validTarget.dataset.value;
 
-		displayMenuItems(cat);
+		displayMenuItems(category);
 	}
 });
 

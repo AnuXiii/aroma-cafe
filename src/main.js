@@ -1,6 +1,6 @@
 import { Header } from "./components/header";
-import { Button } from "./components/button";
 import { Footer } from "./components/footer";
+import { Button } from "./components/button";
 import { loadImages } from "./components/imgLoader";
 import { loadAnimations } from "./utils/gsap";
 import { HeaderSection } from "./components/headerSection";

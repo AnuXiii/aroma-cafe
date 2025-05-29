@@ -1,6 +1,7 @@
 import { callAlert } from "../components/alerts";
 import emailjs from "@emailjs/browser";
 
+// import emailjs keys & id's from .env file
 const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
 const customerTemplateId = import.meta.env.VITE_APP_COMMENT_TEMPLATE_ID;
 const contactUsTemplateId = import.meta.env.VITE_APP_CONTACT_US_TEMPLATE_ID;
@@ -19,7 +20,7 @@ if (form) {
 	formController();
 }
 
-// form controler function for control sending inputs data - validate inputs
+// form controller function for control sending inputs data - validate inputs
 export function formController() {
 	form.addEventListener("submit", (e) => {
 		e.preventDefault();
@@ -39,10 +40,11 @@ export function formController() {
 		});
 
 		if (!validator) {
-			callAlert("لطفا تمامی فیلد ها را پر کنید", "bg-rose-500");
+			callAlert("لطفا تمامی ورودی ها را پر کنید", "bg-rose-500");
 			return;
 		}
 
+		// check user passed captcha
 		const recaptchaResponse = grecaptcha.getResponse();
 		if (recaptchaResponse.length === 0) {
 			callAlert("لطفا تایید کنید که ربات نیستید", "bg-rose-500");
@@ -55,10 +57,12 @@ export function formController() {
 			button.classList.remove("sending");
 			inputs.forEach((input) => {
 				input.value = "";
-				grecaptcha.reset();
 				if (input.nextElementSibling) {
 					input.nextElementSibling.classList.remove("active");
 				}
+
+				// reset google captcha
+				grecaptcha.reset();
 			});
 
 			if (formType === "comment") {

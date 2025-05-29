@@ -1,4 +1,4 @@
-export function modal(content = null) {
+export function modal(content) {
 	const div = document.createElement("div");
 	div.className = "modal";
 	div.innerHTML = `
@@ -17,16 +17,10 @@ export function modal(content = null) {
 	div.querySelector(".content-inner").classList.add("fade-up");
 
 	div.addEventListener("click", (e) => {
-		if (!e.target.closest(".modal-content")) {
+		if (!e.target.closest(".content-inner")) {
 			document.body.classList.remove("overflow-hidden");
 			div.querySelector(".content-inner").classList.remove("fade-up");
 			div.remove();
 		}
-	});
-
-	div.querySelector(".close-modal").addEventListener("click", () => {
-		document.body.classList.remove("overflow-hidden");
-		div.querySelector(".content-inner").classList.remove("fade-up");
-		div.remove();
 	});
 }

@@ -57,16 +57,6 @@ noscript {
 		@apply cursor-pointer;
 	}
 
-	input[type="number"] {
-		@apply text-left;
-	}
-
-	input[type="number"]::-webkit-outer-spin-button,
-	input[type="number"]::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
-	}
-
 	/* hero header */
 	.header {
 		@apply fixed w-full right-0 top-0 border-b-2 border-solid border-b-cream/10 z-100 bg-black duration-300 ease-custom;
@@ -86,10 +76,6 @@ noscript {
 
 	.flex-between {
 		@apply flex justify-between items-center;
-	}
-
-	.flex-col-center {
-		@apply flex flex-col justify-between items-center;
 	}
 }
 
@@ -353,6 +339,7 @@ noscript {
 	stroke-dashoffset: -90;
 }
 
+/* spin loader for images on figure with lazy loading attribute */
 .spin-loader {
 	@apply absolute inset-0 flex justify-center items-center bg-black/80 backdrop-blur-xs;
 
@@ -366,6 +353,7 @@ noscript {
 	@apply relative;
 }
 
+/* define custom border for footer socials buttons */
 .custom-border {
 	background:
 		linear-gradient(var(--color-black), var(--color-black)) padding-box,
@@ -394,9 +382,13 @@ noscript {
 }
 
 /* for menu section */
+#menu-grid {
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	@apply max-md:grid-cols-2;
+}
 
 .menu {
-	@apply snap-x flex overflow-x-auto space-x-6 pb-8;
+	@apply flex justify-between snap-x overflow-x-auto space-x-6 pb-8;
 
 	&::-webkit-scrollbar {
 		@apply bg-yellow/30 rounded-full h-2;
@@ -480,7 +472,6 @@ noscript {
 .menu-item-box-color {
 	@apply bg-gradient-to-l from-black via-transparent to-black scale-110;
 }
-
 /* menu section end */
 
 /* gallery section start */
@@ -541,11 +532,9 @@ noscript {
 	@apply z-1 relative bg-black border border-solid border-cream/20 p-4 rounded-lg;
 
 	&::after {
-		@apply absolute content-[''];
-		@apply w-full h-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+		@apply absolute content-[''] w-full h-full inset-0;
 		@apply rounded-lg border-2 border-solid border-transparent;
-		@apply bg-fixed bg-yellow opacity-0;
-		@apply transition-opacity duration-1000 ease-custom;
+		@apply bg-fixed bg-yellow opacity-0 duration-1000 ease-custom;
 		mask: linear-gradient(#0000, #0000),
 			conic-gradient(from calc((var(--start) - (20 * 1.1)) * 1deg), #ffffff1f 0deg, white, #ffffff00 100deg);
 		mask-composite: intersect;
@@ -556,10 +545,6 @@ noscript {
 	&:hover::after {
 		opacity: 1;
 	}
-}
-
-.contact-section {
-	@apply relative p-4 rounded-lg;
 }
 
 .card-figure {
@@ -584,6 +569,11 @@ noscript {
 }
 /* testimonials styles end */
 
+/* content section style */
+.contact-section {
+	@apply relative p-4 rounded-lg;
+}
+
 /* when clicked send button change styles */
 .submit {
 	@apply relative;
@@ -607,6 +597,7 @@ noscript {
 	}
 }
 
+/* add timer for toastify alert */
 .toastify {
 	&::after {
 		@apply content-[""] absolute bottom-0 right-0 w-full h-[3px] bg-yellow rounded-lg;
@@ -614,6 +605,7 @@ noscript {
 	}
 }
 
+/* reset google recaptcha style */
 [title="reCAPTCHA"] {
 	@apply w-full max-w-[280px] ml-auto;
 }

@@ -1,61 +1,94 @@
-# Project Dependencies
+# Aroma Cafe Website
 
-### General Information
+## 📝 Description
 
-- **Name** : Aroma Cafe
-- **Theme**: Dark - Gold - Orange - Cream
-- **Icons**: ionicons
+Official website of Aroma Cafe - A unique experience in coffee drinking and enjoying a relaxing environment
+
+## 🎨 Design & Appearance
+
+- **Color Theme**: Dark - Gold - Orange - Cream
 - **Fonts**: Dana & Poppins
+- **Icons**: ionicons
 
-### Tools & Frameworks
+## 🛠️ Technologies
+
+### Frameworks & Tools
 
 - **CSS Framework**: TailwindCSS
-- **Package Manager/Project Builder**: Vite
+- **Project Builder**: Vite
 
-### Features & Libraries
+### Libraries
 
 - **Alerts**: Toastify.js
 - **Animations**: Gsap.js - ScrollTrigger
-- **Contacting**: Email.js
+- **Contact**: Email.js
 - **Maps**: Neshan
+- **Validating**: Google Recaptcha
 
-<!--  -->
+## 📱 Website Pages
 
-بخش های سایت اینا هستن
+### 1. Home Page
 
-صفحه اصلی : هیرو سکشن - درباره ما
-منو : لیست منو
-گالری : عکس های کافه
-نظرات : نظرات کاربران
-ارتباط باما : فرم تماس
+- **Hero Section**
+  - Attractive cafe image
+  - Brand slogan
+  - CTA button for menu view
+- **About Us**
+  - Cafe introduction
+  - Philosophy and service style
 
-🗂 ساختار کلی صفحات سایت "اروما"
+### 2. Menu
 
-1. صفحه اصلی (Home)
-   هیرو سکشن: تصویر جذاب کافه + شعار برند + دکمه CTA (مثلاً دیدن منو)
+- Various categories
+  - Coffee
+  - Cold drinks
+  - Desserts
+  - Breakfast
+- Item display with:
+  - Image
+  - Title
+  - Description
+  - Price
 
-بخش درباره ما: معرفی مختصر کافه، فلسفه و سبک سرویس
+### 3. Gallery
 
-2. صفحه منو (Menu)
-   نمایش دسته‌بندی‌ها (قهوه، نوشیدنی سرد، دسر، صبحانه و ...)
+- Display of:
+  - Cafe environment
+  - Beverages
+  - Customers
+- Image zoom capability (lightbox)
 
-آیتم‌ها با تصویر کوچک، عنوان، توضیح کوتاه و قیمت
+### 4. Testimonials
 
-3. صفحه گالری (Gallery)
-   گالری شبکه‌ای یا اسلایدر از عکس‌های محیط کافه، نوشیدنی‌ها و مشتری‌ها
+- Customer reviews display
+- User photos/avatars
+- New review submission form
 
-امکان بزرگ‌نمایی عکس‌ها (lightbox)
+### 5. Contact Us
 
-4. صفحه نظرات (Testimonials)
-   نمایش نظرات کاربران واقعی با عکس یا آواتار
+- Contact form
+  - Name
+  - Email
+  - Message
+- Contact information
+  - Phone number
+  - Address
+  - Working hours
+- Location map
 
-شاید یه فرم برای افزودن نظر
+## 🚀 Installation & Setup
 
-5. صفحه تماس با ما (Contact)
-   فرم تماس (نام، ایمیل، پیام)
+```bash
+# Install dependencies
+npm install
 
-اطلاعات تماس (شماره تلفن، آدرس، ساعت کاری)
+# Run in development
+npm run dev
 
-نقشه گوگل (اختیاری)
+# Build for production
+npm run build
+```
 
-<!--  -->
+## 📄 License
+
+This project is licensed under the MIT License.

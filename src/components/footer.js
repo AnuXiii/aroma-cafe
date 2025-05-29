@@ -1,12 +1,11 @@
-import { links } from "../constants";
-import { contactInformation, socials } from "../constants";
+import { links, contactInformation, socials } from "../constants";
 
 export class Footer extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
             <footer class="footer relative overflow-hidden">
                 <div class="opacity-10 absolute inset-0 top-20 scale-125 blur-xs bg-[url('/images/backgrounds/coffee-mask.png')] bg-cover bg-no-repeat"></div>
-                <div class="custom-mask absolute inset-0 bg-gradient-to-t from-black via-transparent lg:via-black/50 to-black"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent lg:via-black/50 to-black"></div>
                 <div class="wrapper gap pb-5">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
                         <div class="flex flex-col gap-12 relative z-2 max-lg:mb-10">

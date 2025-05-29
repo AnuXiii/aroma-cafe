@@ -103,25 +103,82 @@ export const menuItems = [
 ];
 
 export const galleryImages = [
-	{ imgSrc: "/images/gallery/aroma-cafe.png", col: 6 },
-	{ imgSrc: "/images/gallery/breakfast-2.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/aroma-resp.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/breakfast.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/aroma-gallery.jpg", col: 6 },
-	{ imgSrc: "/images/gallery/cappochino-cups.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/chocolate.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/coffee-packs.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/aroma-cup.png", col: 6 },
-	{ imgSrc: "/images/gallery/cakes.jpg", col: 6 },
-	{ imgSrc: "/images/gallery/cook.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/drink-2.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/drink-3.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/drink.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/mojito.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/red-mojito.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/yalda.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/yalda-2.jpg", col: 3 },
-	{ imgSrc: "/images/gallery/yalda-3.jpg", col: 6 },
+	{
+		imgSrc: "/images/gallery/aroma-cafe.png",
+		col: 6,
+	},
+	{
+		imgSrc: "/images/gallery/breakfast-2.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/aroma-resp.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/breakfast.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/aroma-gallery.jpg",
+		col: 6,
+	},
+	{
+		imgSrc: "/images/gallery/cappochino-cups.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/chocolate.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/coffee-packs.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/aroma-cup.png",
+		col: 6,
+	},
+	{
+		imgSrc: "/images/gallery/cakes.jpg",
+		col: 6,
+	},
+	{
+		imgSrc: "/images/gallery/cook.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/drink-2.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/drink-3.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/drink.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/mojito.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/red-mojito.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/yalda.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/yalda-2.jpg",
+		col: 3,
+	},
+	{
+		imgSrc: "/images/gallery/yalda-3.jpg",
+		col: 6,
+	},
 ];
 
 export const testimonials = [

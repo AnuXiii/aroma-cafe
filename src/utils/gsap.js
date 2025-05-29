@@ -18,7 +18,7 @@ export function loadAnimations() {
 					opacity: 1,
 					y: 0,
 					duration: 0.4,
-					delay: index * 0.2, // فاصله کمتر = طبیعی‌تر
+					delay: index * 0.2,
 					ease: "power1.out",
 					scrollTrigger: {
 						trigger: card,
@@ -38,7 +38,10 @@ export function loadAnimations() {
 	if (aboutFig) {
 		gsap.fromTo(
 			aboutFig,
-			{ opacity: 0, x: 20 },
+			{
+				opacity: 0,
+				x: 20,
+			},
 			{
 				opacity: 1,
 				x: 0,
@@ -56,7 +59,10 @@ export function loadAnimations() {
 	if (aboutText) {
 		gsap.fromTo(
 			aboutText,
-			{ opacity: 0, x: -20 },
+			{
+				opacity: 0,
+				x: -20,
+			},
 			{
 				opacity: 1,
 				x: 0,
@@ -74,7 +80,10 @@ export function loadAnimations() {
 	if (aboutCafe) {
 		gsap.fromTo(
 			aboutCafe,
-			{ opacity: 0, y: 100 },
+			{
+				opacity: 0,
+				y: 100,
+			},
 			{
 				opacity: 1,
 				y: 0,

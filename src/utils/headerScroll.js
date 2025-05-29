@@ -1,5 +1,4 @@
 // header scroll controller
-
 export function headerScrollController() {
 	const header = document.querySelector(".header");
 	let lastScrollY = window.scrollY;
