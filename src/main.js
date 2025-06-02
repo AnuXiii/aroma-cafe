@@ -16,3 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	loadImages();
 	loadAnimations();
 });
+
+// const res = await fetch("http://localhost:1337/api/menu-items?populate=*");
+// const data = await res.json();
+// const menu = data.data[0];
+
+// console.log(menu);
