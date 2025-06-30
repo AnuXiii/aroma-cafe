@@ -1,3 +1,6 @@
+// base backend URL
+export const backendURL = import.meta.env.VITE_APP_BACKEND_URL;
+
 // logo src
 export const logo = "/logo.png";
 
@@ -56,128 +59,6 @@ export const socials = [
 		title: "location",
 		link: "https://neshan.org/maps/places/ae_bQOLgyxaR0Z#c35.689-51.389-11z-0p",
 		icon: "location-outline",
-	},
-];
-
-export const menuItems = [
-	{
-		category: "coffee",
-		value: "قهوه ها",
-		icon: "/images/icons/pro-coffee.svg",
-	},
-	{
-		category: "coffeeWithMilk",
-		value: "قهوه با شیر",
-		icon: "/images/icons/coffee-with-milk.svg",
-	},
-	{
-		category: "hotWithoutCoffee",
-		value: "گرم بدون قهوه",
-		icon: "/images/icons/not-coffee.svg",
-	},
-	{
-		category: "herbal",
-		value: "دمنوش ها",
-		icon: "/images/icons/herbal.svg",
-	},
-	{
-		category: "shakes",
-		value: "شیک ها",
-		icon: "/images/icons/shake.svg",
-	},
-	{
-		category: "summer",
-		value: "تابستونی",
-		icon: "/images/icons/summer.svg",
-	},
-	{
-		category: "lemonBased",
-		value: "بر پایه لیمو",
-		icon: "/images/icons/summer-lemon.svg",
-	},
-	{
-		category: "breakfast",
-		value: "صبحانه",
-		icon: "/images/icons/breakfast.svg",
-	},
-];
-
-export const galleryImages = [
-	{
-		imgSrc: "/images/gallery/aroma-cafe.png",
-		col: 6,
-	},
-	{
-		imgSrc: "/images/gallery/breakfast-2.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/aroma-resp.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/breakfast.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/aroma-gallery.jpg",
-		col: 6,
-	},
-	{
-		imgSrc: "/images/gallery/cappochino-cups.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/chocolate.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/coffee-packs.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/aroma-cup.png",
-		col: 6,
-	},
-	{
-		imgSrc: "/images/gallery/cakes.jpg",
-		col: 6,
-	},
-	{
-		imgSrc: "/images/gallery/cook.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/drink-2.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/drink-3.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/drink.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/mojito.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/red-mojito.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/yalda.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/yalda-2.jpg",
-		col: 3,
-	},
-	{
-		imgSrc: "/images/gallery/yalda-3.jpg",
-		col: 6,
 	},
 ];
 

@@ -41,10 +41,6 @@ noscript {
 		direction: rtl;
 	}
 
-	body:not(.ovx-visible) {
-		@apply overflow-x-hidden;
-	}
-
 	i {
 		font-style: normal;
 	}
@@ -319,9 +315,7 @@ noscript {
 }
 
 .humburger-button .humburger {
-	transition:
-		translate 1s,
-		rotate 1s;
+	transition: translate 1s, rotate 1s;
 }
 
 .humburger-button[aria-expanded="true"] .humburger {
@@ -355,14 +349,12 @@ noscript {
 
 /* define custom border for footer socials buttons */
 .custom-border {
-	background:
-		linear-gradient(var(--color-black), var(--color-black)) padding-box,
+	background: linear-gradient(var(--color-black), var(--color-black)) padding-box,
 		linear-gradient(var(--color-yellow), var(--color-orange)) border-box;
 
 	&:hover {
 		@apply shadow-lg shadow-stone-950;
-		background:
-			linear-gradient(var(--color-yellow), var(--color-orange)) padding-box,
+		background: linear-gradient(var(--color-yellow), var(--color-orange)) padding-box,
 			linear-gradient(var(--color-black), var(--color-black)) border-box;
 	}
 
@@ -422,7 +414,7 @@ noscript {
 
 /* for menu items boxes */
 .menu-item-box {
-	@apply opacity-0 translate-y-10 flex flex-col justify-center items-center overflow-hidden relative py-4 px-0 z-1;
+	@apply cursor-pointer opacity-0 translate-y-10 flex flex-col justify-center items-center overflow-hidden relative py-4 px-0 z-1;
 	@apply border-b border-solid border-cream/20;
 
 	&:hover {
@@ -471,6 +463,10 @@ noscript {
 
 .menu-item-box-color {
 	@apply bg-gradient-to-l from-black via-transparent to-black scale-110;
+}
+
+.item-info-modal {
+	@apply bg-black bg-gradient-to-r from-black to-neutral-900 rounded-lg p-4 border border-solid border-yellow;
 }
 /* menu section end */
 
@@ -597,7 +593,7 @@ noscript {
 	}
 }
 
-/* add timer for toastify alert */
+/* add timer animation for toastify alert */
 .toastify {
 	&::after {
 		@apply content-[""] absolute bottom-0 right-0 w-full h-[3px] bg-yellow rounded-lg;
@@ -605,7 +601,20 @@ noscript {
 	}
 }
 
-/* reset google recaptcha style */
+/* reset google captcha style */
 [title="reCAPTCHA"] {
 	@apply w-full max-w-[280px] ml-auto;
+}
+
+/* empty box for menu items container then no many menu items on container this element show */
+.empty-box {
+	@apply flex flex-col justify-center items-center col-span-full opacity-0 translate-y-10;
+
+	img {
+		@apply w-96 h-56 object-cover;
+	}
+
+	h3 {
+		@apply text-xl md:text-3xl text-rose-500/80 text-center font-semibold font-dana-bold;
+	}
 }

@@ -55,7 +55,7 @@ export class Footer extends HTMLElement {
 																	)
 																	.join("")}
                             </ul>
-                            <figure data-figure="true">
+                            <figure>
                                 <iframe title="map-iframe" src="https://neshan.org/maps/iframe/places/aea93c735f80f6dcfdab6b507af58bd7#c35.497-51.737-11z-0p/35.4968684/51.6603149" class="w-full h-[300px] rounded-lg" allowFullScreen loading="lazy"></iframe>
                             </figure>
                         </div>

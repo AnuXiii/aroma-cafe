@@ -1,5 +1,5 @@
-export function loadImages() {
-	const imgLoader = document.querySelectorAll("[loading=lazy]");
+export function spinLoader() {
+	const imgLoader = document.querySelectorAll("[data-figure] [loading=lazy]");
 
 	if (imgLoader.length) {
 		imgLoader.forEach((img) => {

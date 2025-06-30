@@ -125,3 +125,5 @@ export function loadAnimations() {
 		});
 	}
 }
+
+loadAnimations();
