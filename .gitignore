@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 tailwind.config.js
-*.env
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +23,5 @@ tailwind.config.js
 *.njsproj
 *.sln
 *.sw?
+
+.env
