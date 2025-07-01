@@ -1,22 +1,21 @@
 import { spinLoader } from "./spinLoader";
 import { databases, getImageUrl, DB_ID } from "../appwriteClinet";
+import { showError } from "./showError";
 
 const MENUS = import.meta.env.VITE_APPWRITE_MENU_ID;
 
 export class menuItems extends HTMLElement {
 	async connectedCallback() {
 		let menus = [];
-
+		//
 		try {
 			const items = await databases.listDocuments(DB_ID, MENUS);
 			menus = items.documents;
 		} catch (err) {
-			this.innerHTML = `
-			<p class="text-rose-500">Failed to fetch data</p>
-			`;
+			this.innerHTML = showError("خطا هنگام بارگزاری اطلاعات، VPN خود را فعال کنید");
 			return;
 		}
-
+		//
 		this.innerHTML = `
             <nav class="menu">
             ${menus

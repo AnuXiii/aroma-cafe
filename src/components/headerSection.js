@@ -20,3 +20,5 @@ export class HeaderSection extends HTMLElement {
 }
 
 customElements.define("c-header-section", HeaderSection);
+
+// return custom hero section for top of the every page want it

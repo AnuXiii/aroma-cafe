@@ -64,7 +64,7 @@ export class Footer extends HTMLElement {
                     <div class="relative flex justify-between items-center gap-6 max-lg:flex-wrap max-lg:justify-center max-lg:text-center">
                        <p class="text-cream/70">تمامی حقوق این <a class="text-yellow font-semibold duration-200 hover:opacity-70" href="/">وبسایت</a> برای کافه آروما محفوظ می باشد ${new Date().getFullYear()} &copy</p>  
                           
-                        <p class="text-cream/70">طراحی و توسعه توسط <a class="text-yellow font-semibold duration-200 hover:opacity-70" target="_blank" href="https://instagram.com/mahdirs.696">مهدی رستمی</a></p>                                  
+                        <p class="text-cream/70">طراحی و توسعه توسط <a class="text-yellow font-semibold duration-200 hover:opacity-70" target="_blank" href="https://instagram.com/mahdi.anuxi">مهدی رستمی</a></p>                                  
                     </div>
                 </div>
             </footer>
@@ -73,3 +73,5 @@ export class Footer extends HTMLElement {
 }
 
 customElements.define("c-footer", Footer);
+
+// return reuseable footer component

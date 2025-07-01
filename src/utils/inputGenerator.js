@@ -32,6 +32,7 @@ export class CustomInput extends HTMLElement {
 
 customElements.define("c-input", CustomInput);
 
+// this code scope control label's animations on inputs element when user focus on it
 const inputs = document.querySelectorAll(".input");
 
 inputs.forEach((input) => {

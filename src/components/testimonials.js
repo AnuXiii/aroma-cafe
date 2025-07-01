@@ -1,6 +1,7 @@
 import { testimonials } from "../constants";
 import { initializeGlowEffect } from "../utils/glowEffect";
 
+// function to render stars
 function renderStars(score) {
 	let starElm = "";
 

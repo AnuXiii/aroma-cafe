@@ -9,3 +9,5 @@ export function callAlert(msg, type) {
 		className: type,
 	}).showToast();
 }
+
+// this function to show custom toast with specefic message and alert types we are passing in

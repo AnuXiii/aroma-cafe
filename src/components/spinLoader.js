@@ -24,3 +24,5 @@ export function spinLoader() {
 		});
 	}
 }
+
+// this function when using appended to figure[data-figure] => img elements to add spin loader animation

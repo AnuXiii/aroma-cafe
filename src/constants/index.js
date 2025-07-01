@@ -1,6 +1,3 @@
-// base backend URL
-export const backendURL = import.meta.env.VITE_APP_BACKEND_URL;
-
 // logo src
 export const logo = "/logo.png";
 

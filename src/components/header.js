@@ -120,3 +120,5 @@ export class Header extends HTMLElement {
 }
 
 customElements.define("c-header", Header);
+
+// this custom element return reuseable header component

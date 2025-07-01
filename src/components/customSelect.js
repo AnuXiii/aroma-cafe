@@ -83,3 +83,5 @@ export class Select extends HTMLElement {
 }
 
 customElements.define("c-select", Select);
+
+// this web component returned a custom select box element with one selecting pattern

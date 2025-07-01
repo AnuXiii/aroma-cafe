@@ -12,3 +12,5 @@ export class Button extends HTMLElement {
 }
 
 customElements.define("c-button", Button);
+
+// this web component returned a button tag or link tag element with different types - href - classes and more...
