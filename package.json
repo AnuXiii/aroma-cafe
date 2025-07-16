@@ -9,7 +9,8 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"vite": "^6.3.5"
+		"vite": "^6.3.5",
+		"vite-plugin-static-copy": "^3.1.1"
 	},
 	"dependencies": {
 		"@emailjs/browser": "^4.4.1",
