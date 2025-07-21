@@ -10,6 +10,7 @@ import { Testimonials } from "./components/testimonials";
 import { CustomInput } from "./utils/inputGenerator";
 import { Select } from "./components/customSelect";
 import { formController } from "./utils/formControl";
-import { loadAnimations } from "./utils/gsap";
 
-spinLoader();
+window.addEventListener("load", () => {
+	spinLoader();
+});

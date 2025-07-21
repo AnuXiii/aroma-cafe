@@ -17,10 +17,10 @@ export class Header extends HTMLElement {
                     </button>
 
                     <div class="flex justify-center items-center max-md:hidden">
-                        <button class="location-btn btn gap-2 font-bold" title="location" aria-lable="location">
-                            <span>لوکیشن</span>
+                        <button class="location-btn btn gap-2 font-bold" title="contact information" aria-lable="contact information">
+                            <span>اطلاعات تماس</span>
                             <i class="icon">
-                                <ion-icon name="location"></ion-icon>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                             </i>         
                         </button>
                     </div>
@@ -34,7 +34,7 @@ export class Header extends HTMLElement {
                                 <li>
                                     <a href="${link.path}" role="link" title="${link.text}" arai-label="${link.text}" class="link header-link flex-center">${link.text}</a>
                                 </li>
-                                `
+                                `,
 															)
 															.join("")}
                     </nav>
@@ -85,7 +85,7 @@ export class Header extends HTMLElement {
 		// when user click location button show modal with map content and contact information from index.js
 		this.querySelector(".location-btn").addEventListener("click", () => {
 			modal(`
-                <div class="w-screen wrapper grid items-center justify-between gap-12 grid-cols-1 lg:grid-cols-12">
+                <div class="w-screen wrapper flex justify-center items-center">
                     <div class="flex flex-col col-span-4 max-lg:hidden">
                         <h2 class="font-bold text-4xl pb-4 mb-4 border-b border-solid border-yellow">اطلاعات تماس</h2>
                         <ul class="flex flex-col gap-4">
@@ -98,20 +98,11 @@ export class Header extends HTMLElement {
                                             <span class="flex-none text-cream">${item.title}:</span>
                                             <span class="text-cream/70 ${item.textColor}">${item.desc}</span>
                                         </li>
-                                        `
+                                        `,
 															)
 															.join("")}
                         </ul>
                     </div>
-                    <figure data-figure="true" class="col-span-full lg:col-span-8">
-                        <iframe
-                            title="map-iframe"
-                            src="https://neshan.org/maps/iframe/places/aea93c735f80f6dcfdab6b507af58bd7#c35.497-51.737-11z-0p/35.4968684/51.6603149"
-                            class="h-[95vh] w-full rounded-lg"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </figure>
                 </div>    
                     
                     `);
