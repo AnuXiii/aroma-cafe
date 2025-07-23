@@ -2,6 +2,7 @@ import { modal } from "./modal";
 import { showError } from "../components/showError";
 import { spinLoader } from "../components/spinLoader";
 import { databases, getImageUrl, DB_ID } from "../appwriteClinet";
+import { Query } from "appwrite";
 
 const ITEMS = import.meta.env.VITE_APPWRITE_ITEMS_ID;
 
@@ -11,7 +12,7 @@ export async function displayMenuItems(category) {
 	let menuItems = [];
 	//
 	try {
-		const items = await databases.listDocuments(DB_ID, ITEMS);
+		const items = await databases.listDocuments(DB_ID, ITEMS, [Query.equal("category", category), Query.limit(100)]);
 		menuItems = items.documents;
 	} catch (err) {
 		menuItemsContaienr.innerHTML = showError("خطا هنگام بارگزاری اطلاعات، VPN خود را فعال کنید");
